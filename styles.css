@@ -1,0 +1,547 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ======================
+   BASE
+====================== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.4;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  flex-shrink: 0;
+  margin-bottom: 25px;
+}
+
+/* ======================
+   GRILLE PRODUITS
+====================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+figure {
+  margin: 0;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 8px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.thumb {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+figcaption {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  background: #f2f2f2;
+  width: 100%;
+  padding: 6px;
+  margin: 0 0 6px 0;
+  border-radius: 8px;
+
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+/* ======================
+   TEXTE / ÉTATS
+====================== */
+
+.muted {
+  color: #666;
+  font-size: 13px;
+}
+
+.missing {
+  font-size: 12px;
+  color: #c00;
+  margin-top: 8px;
+}
+
+.stock {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ======================
+   TAILLES
+====================== */
+
+.size {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.size select {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* ======================
+   PRIX
+====================== */
+
+.price {
+  margin-top: auto;
+  padding: 6px 0 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.price-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #555;
+}
+
+.price-amount {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  font-weight: 800;
+  color: #333;
+}
+
+.price-amount .int {
+  font-size: 26px;
+}
+
+.price-amount .dec {
+  font-size: 13px;
+  position: relative;
+  top: 2px;
+}
+
+.price-amount .eur {
+  font-size: 13px;
+  font-weight: 700;
+  color: #444;
+  position: relative;
+  top: 10px;
+}
+
+/* ======================
+   HEADER
+====================== */
+
+header.top {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+
+#app {
+  margin-top: 12px;
+}
+
+/* ======================
+   VARIABLES CATÉGORIES
+====================== */
+
+:root {
+  --cat-gap: 6px;
+}
+
+.catButtons {
+  display: flex;
+  gap: var(--cat-gap);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 14px 0;
+  width: 100%;
+
+  border-top: 1px solid rgba(198, 160, 74, 0.25);
+  border-bottom: 1px solid rgba(158, 124, 50, 0.45);
+}
+
+
+/* ======================
+   BOUTONS CATÉGORIES
+====================== */
+
+.catBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  min-height: 130px;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+/* CADRE UNIFORME */
+.catBtn .catIcon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6f6f6;
+  border-radius: 50%;
+
+  border: 1.5px solid #c6a04a;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.70) inset,
+    0 1px 2px rgba(255, 255, 255, 0.35),
+    0 1px 4px rgba(158, 124, 50, 0.55);
+}
+
+.catBtn:hover .catIcon {
+  border-color: #d4b05c;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.70) inset,
+    0 2px 6px rgba(158, 124, 50, 0.75);
+}
+
+
+
+/* IMAGE DANS LE CADRE */
+.catBtn .catIcon {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.catBtn .catIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+
+.catBtn span {
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  color: #222;
+  margin-top: 2px;
+}
+
+.catBtn.active .catIcon {
+  border-color: #9e7c32;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.70) inset,
+    0 2px 8px rgba(158, 124, 50, 0.9);
+}
+
+.catBtn.active span {
+  color: #000;
+}
+
+
+/* ======================
+   SELECT MOBILE
+====================== */
+
+.catSelect {
+  display: none;
+  width: 100%;
+  max-width: 360px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 700px), (pointer: coarse) {
+  .logo { height: 70px; }
+  .catButtons { display: none; }
+  .catSelect { display: block; }
+}
+
+/* ======================
+   BANDEAU NUANCIER
+====================== */
+
+.top-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#catButtons {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.nuancier-mini img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.nuancier-mini p {
+  font-size: 11px;
+  color: #666;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+/* ===== Bandeau marques + nuancier ===== */
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+#catButtons {
+  flex: 1 1 auto;
+  /* prend la place */
+  min-width: 0;
+  /* autorise le scroll */
+}
+
+.nuancier-mini img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.nuancier-mini p {
+  font-size: 11px;
+  color: #666;
+  margin: 4px 0 0;
+  line-height: 1.2;
+}
+
+.titleLink {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.titleLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Cecil : logo rectangulaire => on évite le crop */
+.catBtn[data-cat="cecil"] .catIcon img {
+  object-fit: contain;
+  padding: 10px;
+  /* ajuste 8–14px selon rendu */
+  background: #fff;
+  /* optionnel : fond blanc propre */
+  border-radius: 50%;
+}
+
+.catBtn[data-cat="motip"] .catIcon img {
+  object-fit: contain;
+  padding: 1px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* ===== Groupes (titres au-dessus centrés) ===== */
+
+.catGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.catGroupTitle {
+  font-size: 13px;
+  font-weight: 800;
+  color: #9e7c32;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+
+.catGroupRow {
+  display: flex;
+  gap: var(--cat-gap);
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* séparation visuelle entre Peintures / Protections bois */
+.catGroup+.catGroup {
+  border-left: 1px solid rgba(158, 124, 50, 0.35);
+  padding-left: 18px;
+  margin-left: 18px;
+}
+
+/* ===== Nuancier : centré dans l'espace libre à droite ===== */
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+#catButtons {
+  flex: 0 1 auto;
+  /* le menu prend sa largeur */
+  min-width: 0;
+}
+
+/* le nuancier prend le reste et se centre dedans */
+.nuancier-mini {
+  flex: 1 1 auto;
+  /* prend toute la zone restante */
+  display: flex;
+  justify-content: center;
+  /* centre son contenu */
+  align-items: center;
+}
+
+.nuancier-mini>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  /* largeur max du nuancier */
+}
+
+.nuancier-mini img {
+  width: 100%;
+  max-width: 360px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.nuancier-mini p {
+  font-size: 11px;
+  color: #666;
+  margin: 4px 0 0;
+  line-height: 1.2;
+}
+
+/* ===== Bandeau : boutons à gauche + nuancier centré dans l'espace restant ===== */
+.nav-row {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  /* gauche = largeur contenu, droite = reste */
+  align-items: center;
+  column-gap: 16px;
+  width: 100%;
+}
+
+#catButtons {
+  width: auto !important;
+  /* 👈 écrase le width:100% de .catButtons */
+  flex: none;
+  /* inutile en grid mais évite conflits */
+}
+
+.nuancier-mini {
+  display: flex;
+  justify-content: center;
+  /* 👈 centre dans la colonne droite */
+  align-items: center;
+}
+
+/* Hammerite : logo complet visible */
+.catBtn[data-cat="hammerite"] .catIcon img {
+  object-fit: contain;
+  padding: 1px;
+  background: #fff;
+}
+
+.pdfTag {
+  font-size: 9px;
+  font-weight: 700;
+  background: #e9ecef;
+  color: #555;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
+  letter-spacing: .5px;
+}
+
+/* ===== Fix mobile en iframe (viewport parent parfois faux) ===== */
+@media (max-width: 700px), (pointer: coarse) {
+
+  body {
+    margin: 12px;
+  }
+
+  /* Optionnel : images un peu plus grandes */
+  .thumb {
+    height: 120px;
+  }
+
+  .price-amount .int {
+    font-size: 32px;
+  }
+}
