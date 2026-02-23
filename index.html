@@ -43,17 +43,25 @@
 
   <script>
     const IMAGES = {
+
+      "vinyle": [
+        "rigid-floor-natural.png",
+        "rigid-floor-oak.png",
+        "rocko-R078.png"
+      ],
+
+      "dalles-vinyle": [
+        "dalle-vinyle-1.png",
+        "dalle-vinyle-2.png"
+      ],
+
       "stratifie": [
         "parquet-stratifie-1.png",
         "parquet-stratifie-2.png",
         "parquet-stratifie-3.png",
         "parquet-stratifie-4.png"
       ],
-      "vinyle": [
-        "rigid-floor-natural.png",
-        "rigid-floor-oak.png",
-        "rocko-R078.png"
-      ]
+
     };
 
     const DISPLAY_NAMES = {
@@ -89,17 +97,20 @@
     // 5) UI catégories
     // =========================
     const CATEGORY_UI = [
-      { id: "stratifie", label: "Stratifié" },
-      { id: "vinyle", label: "Vinyle" }
+      { id: "vinyle", label: "Parquets vinyle" },
+      { id: "dalles-vinyle", label: "Dalles vinyle" },
+      { id: "stratifie", label: "Parquets stratifié" },
+
     ];
 
     const CAT_ICONS = {
+      "vinyle": "vignettes-boutons/vinyle.png",
+      "dalles-vinyle": "vignettes-boutons/dalles-vinyle.png",
       "stratifie": "vignettes-boutons/stratifie.png",
-      "vinyle": "vignettes-boutons/vinyle.png"
     };
 
     const CAT_GROUPS = [
-      { id: "parquets", label: "", cats: ["stratifie", "vinyle"] }
+      { id: "parquets", label: "", cats: ["vinyle", "dalles-vinyle", "stratifie"] }
     ];
 
     const PRICE_MANIFEST_URL = "prix/manifest.json";
