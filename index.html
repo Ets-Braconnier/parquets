@@ -50,10 +50,6 @@
         "rocko-R078.png"
       ],
 
-      "dalles-vinyle": [
-        "dalle-vinyle-1.png",
-      ],
-
       "stratifie": [
         "oak-grand-brown-190131.png",
         "oak-grand-titanium-192036.png",
@@ -97,19 +93,17 @@
     // =========================
     const CATEGORY_UI = [
       { id: "vinyle", label: "Parquets vinyle" },
-      { id: "dalles-vinyle", label: "Dalles vinyle" },
       { id: "stratifie", label: "Parquets stratifié" },
 
     ];
 
     const CAT_ICONS = {
       "vinyle": "vignettes-boutons/vinyle.png",
-      "dalles-vinyle": "vignettes-boutons/dalles-vinyle.png",
       "stratifie": "vignettes-boutons/stratifie.png",
     };
 
     const CAT_GROUPS = [
-      { id: "parquets", label: "", cats: ["vinyle", "dalles-vinyle", "stratifie"] }
+      { id: "parquets", label: "", cats: ["vinyle","stratifie"] }
     ];
 
     const PRICE_MANIFEST_URL = "prix/manifest.json";
