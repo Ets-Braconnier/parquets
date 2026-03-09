@@ -45,6 +45,7 @@
     const IMAGES = {
 
       "vinyle": [
+        "dalle-vinyle-lotet-40346.png",
         "rigid-floor-natural.png",
         "rigid-floor-oak.png",
         "rocko-R078.png"
@@ -54,7 +55,12 @@
         "oak-grand-brown-190131.png",
         "oak-grand-titanium-192036.png",
         "oak-summer-beige-170041.png",
-        "oak-welsh-188657.png"
+        "oak-welsh-188657.png",
+        "parquet-uniclic-chene-authentique-gris-clair-lcf00268.png",
+        "parquet-uniclic-chene-fume-gris-clair-v4-8mm-lcv344.png",
+        "parquet-uniclic-chene-montana-7mm-lcf00254.png",
+        "parketfoam-3mm-1.20x15m.png",
+        "steico-underfloor-4mm-59x79.png"
       ],
 
     };
@@ -63,11 +69,17 @@
 
       // Stratifié
       "stratifie/oak-grand-brown-190131.png": "OAK Grand Brown",
-      "stratifie/oak-grand-titanium-192036.png":"OAK Grand Titanium",
+      "stratifie/oak-grand-titanium-192036.png": "OAK Grand Titanium",
       "stratifie/oak-summer-beige-170041.png": "OAK Summer beige",
       "stratifie/oak-welsh-188657.png": "OAK Welsh",
+      "stratifie/parquet-uniclic-chene-authentique-gris-clair-lcf00268.png": "Uniclic chêne authentique gris clair",
+      "stratifie/parquet-uniclic-chene-fume-gris-clair-v4-8mm-lcv344.png": "Uniclic chêne fumé gris clair V4 8mm",
+      "stratifie/parquet-uniclic-chene-montana-7mm-lcf00254.png": "Uniclic chêne montana 7mm",
+      "stratifie/parketfoam-3mm-1.20x15m.png": "Parketfoam 3mm 1.20x15m",
+      "stratifie/steico-underfloor-4mm-59x79.png": "Steico Underfloor 4mm 59x79",
 
-      // Vinyle  
+      // Vinyle
+      "vinyle/dalle-vinyle-lotet-40346.png": "Dalle vinyle 4+1mm",
       "vinyle/rigid-floor-natural.png": "Natural",
       "vinyle/rigid-floor-oak.png": "OAK",
       "vinyle/rocko-R078.png": "R078"
@@ -79,7 +91,9 @@
       // Vinyle
       "vinyle/rigid-floor-natural.png": "pdf/rigid-floors-natural.pdf",
       "vinyle/rigid-floor-oak.png": "pdf/rigid-floors-oak.pdf",
-      "vinyle/rocko-R078.png": "pdf/rocko-5+1.pdf"
+      "vinyle/rocko-R078.png": "pdf/rocko-5+1.pdf",
+      "vinyle/dalle-vinyle-lotet-40346.png": "pdf/dalle-vinyle.pdf",
+    
 
     };
 
@@ -103,7 +117,7 @@
     };
 
     const CAT_GROUPS = [
-      { id: "parquets", label: "", cats: ["vinyle","stratifie"] }
+      { id: "parquets", label: "", cats: ["vinyle", "stratifie"] }
     ];
 
     const PRICE_MANIFEST_URL = "prix/manifest.json";
